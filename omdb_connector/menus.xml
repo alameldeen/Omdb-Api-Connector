@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<menuitem id="omdb_connector_menu" name="OMDB Connector"  sequence="10" />
+		<menuitem id="omdb_type_menu" name="OMDB Type"  parent="omdb_connector_menu" action="omdb_type_action" sequence="10" groups="omdb_connector.res_group_omdb_type" />
+		<menuitem id="omdb_api_key_menu" name="OMDB Api Key"  parent="omdb_connector_menu" action="omdb_api_key_action" sequence="20" groups="omdb_connector.res_group_omdb_api_key" />
+		<menuitem id="omdb_search_wizard_menu" name="OMDB Search"  parent="omdb_connector_menu" action="omdb_search_wizard_action" sequence="30" groups="omdb_connector.res_group_omdb_search" />
+
+	</data>
+</odoo>

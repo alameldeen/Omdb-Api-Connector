@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+		<record id='omdb_type_1' model='omdb.type'>
+			<field name='name'>movie</field>
+		</record>
+		
+		<record id='omdb_type_2' model='omdb.type'>
+			<field name='name'>series</field>
+		</record>
+		
+		<record id='omdb_type_3' model='omdb.type'>
+			<field name='name'>episode</field>
+		</record>
+		
+		<record id='omdb_partner_1' model='res.partner'>
+			<field name='name'>OMDB Vendor</field>
+			<field name='supplier'>1</field>
+		</record>
+
+  </data>
+</odoo>

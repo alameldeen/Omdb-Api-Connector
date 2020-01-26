@@ -1,0 +1,3 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_omdb_api_key,access_omdb_api_key,model_omdb_api_key,omdb_connector.res_group_omdb_api_key,1,1,1,1
+access_omdb_type,access_omdb_type,model_omdb_type,omdb_connector.res_group_omdb_type,1,1,1,1

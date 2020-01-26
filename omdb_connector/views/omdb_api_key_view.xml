@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <record id="view_omdb_api_key_form" model="ir.ui.view">
+      <field name="name">view.omdb.api.key.form</field>
+      <field name="model">omdb.api.key</field>
+      <field name="arch" type="xml">
+        <form string="OMDB Api Key">
+          <head></head>
+          <sheet>
+            <group name="main">
+              <group>
+              	<field name="name"/>
+              	<field name="type_id"/>
+              	<field name='pages' />
+              	<field name='tomatoes' />
+              </group>
+              <grooup>
+              	<field name='returned_value'  readonly='1'/>
+              	<field name='fullplot' />
+              	<field name='timeout' />
+              	<field name="active"/>
+              </grooup>
+            </group>
+          </sheet>
+          <footer></footer>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_omdb_api_key_tree" model="ir.ui.view">
+      <field name="name">view.omdb.api.key.tree</field>
+      <field name="model">omdb.api.key</field>
+      <field name="arch" type="xml">
+        <tree string="OMDB Api Key" editable="bottom">
+          <field name="name"/>
+          <field name="type_id"/>
+          <field name="pages"/>
+          <field name="tomatoes"/>
+          <field name="returned_value" readonly='1'/>
+          <field name="fullplot"/>
+          <field name="timeout"/>
+          <field name="active"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_omdb_api_key_search" model="ir.ui.view">
+      <field name="name">view.omdb.api.key.search</field>
+      <field name="model">omdb.api.key</field>
+      <field name="arch" type="xml">
+        <search string="OMDB Api Key">
+          <field name="name"/>
+          <field name="type_id"/>
+          <field name="pages"/>
+          <field name="tomatoes"/>
+          <field name="returned_value"/>
+          <field name="fullplot"/>
+          <field name="timeout"/>
+          <field name="active"/>
+          <filter name="groupby_type_id" string="Type" domain='[]' context='{"group_by": "type_id"}'/>
+        </search>
+      </field>
+    </record>
+
+    <record id="omdb_api_key_action" model="ir.actions.act_window">
+      <field name="name">OMDB Api Key</field>
+      <field name="res_model">omdb.api.key</field>
+      <field name="view_mode">tree,form</field>
+      <field name="domain">[]</field>
+      <field name="context">{}</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Click to create a new OMDB Api Key.
+        </p>
+      </field>
+    </record>
+
+  </data>
+</odoo>

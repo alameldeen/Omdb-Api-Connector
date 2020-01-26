@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <record id="omdb_search_wizard_form" model="ir.ui.view">
+            <field name="name">omdb.search.wizard.form</field>
+            <field name="model">omdb.search.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                	<header></header>
+                    <group name="main">
+                        <group name="left_group">
+                        	<field name="api_key"/>
+                            <field name="type_id"/>
+                            <field name="returned_value" readonly='1'/>
+                            <field name="pages"/>
+                            <field name="fullplot"/>
+                            <field name="tomatoes"/>
+                            <field name="timeout"/>
+                        </group>
+                        <group name="right_group">
+                            <field name="name"/>
+                            <field name="year"/>
+                            <field name="season"/>
+                            <field name="episode"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Get Data" name="action_get_data" type="object" class="oe_highlight"/>
+                        <button string="Cancel" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    <record id="omdb_search_wizard_action" model="ir.actions.act_window">
+      <field name="name">OMDB Search Wizard</field>
+      <field name="res_model">omdb.search.wizard</field>
+      <field name="view_mode">form</field>
+      <field name="domain">[]</field>
+      <field name="context">{}</field>
+      <field name="target">new</field>
+    </record>
+
+  </data>
+</odoo>

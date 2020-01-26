@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+	<record id="res_group_omdb_type" model="res.groups">
+	    <field name="name">OMDB Type</field>
+	</record>
+	
+	<record id="res_group_omdb_api_key" model="res.groups">
+	    <field name="name">OMDB Api Key</field>
+	</record>
+	
+	<record id="res_group_omdb_search" model="res.groups">
+	    <field name="name">OMDB Search</field>
+	</record>
+
+  </data>
+</odoo>
