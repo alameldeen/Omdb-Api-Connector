@@ -89,7 +89,7 @@ class OmdbSearchWizard(models.TransientModel):
                 'invoice_line_ids': [(0, 0, {
                     'product_id': line.product_id.id, 
                     'name': line.product_id.name, 
-                    'product_qty': line.product_qty, 
+                    'quantity': line.product_qty, 
                     'price_unit': line.price_unit, 
                     'account_id': purchase_order_id.partner_id.property_account_payable_id.id,
             }) for line in purchase_order_id.order_line],
